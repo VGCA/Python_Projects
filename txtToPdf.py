@@ -1,5 +1,9 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+import sys
+
+txtToPdf = sys.argv[1]
+toPdf = sys.argv[2]
 
 def txt_to_pdf(txt_file, pdf_file):
     # Crear un objeto Canvas para el archivo PDF
@@ -24,4 +28,4 @@ def txt_to_pdf(txt_file, pdf_file):
     c.save()  # Guardar el PDF
 
 # Llamada a la función
-txt_to_pdf("archivo.txt", "archivo.pdf")
+txt_to_pdf(txtToPdf,toPdf)

@@ -1,9 +1,9 @@
 from PIL import Image
+import sys
 
-# Load the PNG image or other extension
-# and convert it to JPEG format
-image_path = "image.webp"
-jpeg_image_path = "newImage.jpeg"
+# Load the PNG image and convert it to JPEG format
+image_path = sys.argv[1]
+jpeg_image_path = sys.argv[2]
 
 # Open the image and save it as JPEG
 with Image.open(image_path) as img:
